@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Prickles-And-Co": {
+    "School-Advisor": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Prickles-And-Co",
+            "outputPath": "dist/School-Advisor",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -79,18 +79,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Prickles-And-Co:build"
+            "browserTarget": "School-Advisor:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Prickles-And-Co:build:production"
+              "browserTarget": "School-Advisor:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Prickles-And-Co:build"
+            "browserTarget": "School-Advisor:build"
           }
         },
         "test": {
@@ -128,16 +128,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Prickles-And-Co:serve"
+            "devServerTarget": "School-Advisor:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Prickles-And-Co:serve:production"
+              "devServerTarget": "School-Advisor:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Prickles-And-Co"
+  "defaultProject": "School-Advisor"
 }
