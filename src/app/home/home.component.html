@@ -1,0 +1,259 @@
+<!-- ---------------Welcome Section----------------- -->
+
+<div class="welcome">
+  <div class="title">
+    <h1>School Advisor</h1>
+  </div>
+  <div class="sub-title">
+    <p>Our power of choice is untrammelled and when nothing prevents our being able to do what we like best. </p>
+  </div>
+  <button class="btn-0" (click)="scroll('about-us')">About Us</button>
+</div>
+
+<!----------------------------------------------------->
+
+
+<!-- ---------------Highlight Section----------------- -->
+<div class="highlight">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-4 info" *ngFor="let info of info; let i=index">
+        <div class="icon-holder">
+          <span class="icon-concept{{i+1}}">
+            <div class="circle"></div><i class="{{info.icon}}"></i>
+          </span>
+        </div>
+        <div class="inner-content card">
+          <div class="text">
+            <h3>{{info.title}}</h3>
+            <p id="about-us">{{info.describe}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------->
+
+
+
+<!----------------About Us - Section------------------->
+
+<div class="about-us" id="about-us">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12  col-md-5  offset-md-1 photo ">
+        <div class="image">
+        </div>
+        <img src="../../assets/images/about-us.jpg">
+      </div>
+      <div class="col-sm-12  col-md-5  offset-md-1 ">
+        <h3 class="title">About Us</h3>
+        <h3 class="sub-title">A HIGH EFFICIENT
+          FROM <span>A HIGH Experienced TEAM</span></h3>
+
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero autem iste libero tenetur error
+          ullam saepe ipsa optio molestiae, debitis eligendi. Iure eum rem error ipsa odit. Amet, sunt impedit!</p>
+        <p class="text">
+          Esse inventore dignissimos accusamus unde quod asperiores sed expedita enim aut, quos culpa accusantium!
+          Quidem nulla cupiditate similique, quibusdam ipsam eveniet vitae delectus accusamus distinctio assumenda harum
+          quae iste voluptatem.
+        </p>
+        <a class="btn btn-0" [routerLink]="['about-us']">See All Info</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------------------>
+
+<!-----------Recommended Schools - Section ------------->
+
+<div class="recommended-schools" id="rec-school">
+  <h3 class="title">Find Out Our</h3>
+  <h3 class="sub-title">recommended <span>schools</span></h3>
+  <p class="text">We are an experienced team,Who believe in excellence, quality and honesty, yes we give you the most
+    recommended schools genuinely.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4" *ngFor="let school of recommendedSchools">
+        <div class="single-working-box wow fadeInDown animated" data-wow-delay="0ms"
+          style="visibility: visible; animation-delay: 0ms; animation-name: fadeInDown;">
+          <div class="img-holder">
+            <div class="inner">
+              <img src="{{school.img}}" alt="">
+              <div class="overlay-style-one"></div>
+            </div>
+          </div>
+          <div class="text-holder">
+            <div class="plus-icon-box"><a href="" class="icon-plus">+</a></div>
+            <div class="outer-box">
+              <div class="icon">
+                <div class="inner">
+                  <div class="box">
+                    <span class="icon-architecture-and-city1"><img src="../../assets/images/icon-school.png"
+                        width="100%"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                <h3>school name</h3>
+                <p>{{school.type}}</p>
+                <p>{{school.address}}</p>
+                <p>Some important information</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-0" type="button" (click)="showMore()" *ngIf="showMoreKey">Show More</button>
+  <a class="btn btn-0" type="button" [routerLink]="['recommended-schools']" *ngIf="!showMoreKey">Show More</a>
+
+</div>
+
+<!------------------------------------------------------->
+
+
+<!----------------Our Service - Section------------------>
+
+<div class="our-service" id="service">
+  <h3 class="title">To find the best school</h3>
+  <h3 class="sub-title">our services help <span>to make it</span></h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 wow fadeInUp animated" *ngFor="let service of services; let i=index" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: fadeInUp;">
+        <div class="single-working-process text-center">
+          <div class="top-box"><div class="circle"></div><span>{{i+1}}</span></div>
+          <div class="inner">
+            <h3>{{service.title}}</h3>
+            <p>{{service.discribe}}</p>
+
+            <a [routerLink]='routerLinks[i]' class="btn btn-0">Check out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------------------->
+
+<!-----------------Partner - Section--------------------->
+
+
+<div class="be-partner">
+    <div class="container">
+        <div class="row">
+            <h3 class="col-sm-12 col-md-6  col-lg-8">Want to be partner? you can partner with us to connect with students and families throughout the school search process.</h3>
+            <a class="btn btn-0 col-sm-12 col-md-6 col-lg-4" [routerLink]="['join-us']">make an appointment</a>
+        </div>
+    </div>
+</div>
+
+<!-------------Feature Schools- Section---------------->
+<div class="fea-schools">
+  <h3 class="title">Find Out Our</h3>
+  <h3 class="sub-title">feature <span>schools</span></h3>
+  <p class="text">We are an experienced team,Who believe in excellence, quality and honesty, yes we give you the most
+    feature schools genuinely.</p>
+
+
+  <ngb-carousel >
+    <ng-template ngbSlide *ngFor="let school of featureSchools">
+      <div class="school card shadow ">
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/school.jpg" class="card-img-top"  alt="Random first slide">
+        </div>
+        <div class="card-body">
+          <h3 class="school-name">{{school.name}}</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{school.type}}</li>
+            <li class="list-group-item">{{school.address}}</li>
+            <li class="list-group-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt </li>
+          </ul> 
+          <a class="btn btn-0">Show more info</a>
+        </div>
+      </div>
+  </ng-template>
+</ngb-carousel>
+<a class="btn btn-0 " [routerLink]="['feature-schools']">See More</a>
+</div>
+
+
+
+<!----------------------------------------------------->
+
+
+
+
+<!-------------Clints Review - Section----------------->
+
+
+<div class="client-review">
+    <h3 class="title">Reviews</h3>
+    <h3 class="sub-title">our clints  <span>Words</span></h3>
+  
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4" *ngFor="let clint of clints">
+                <div class="single-testimonial-item text-center">
+                    <div class="quote-icon">
+                        <span class="icon-quote1"><img class="quote" src="../../assets/images/quote-sign.png"></span>
+                    </div>
+                    <div class="inner-content">
+                        <div class="client-info">
+                            <h3>{{clint.name}}</h3>
+                            <span>{{clint.country}}</span>
+                        </div>
+                        <div class="img-box">
+                           <div class="circle"></div> <img src="{{clint.img}}" alt="review Image">
+                        </div>
+                        <div class="text-box">
+                            <p>{{clint.review}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------------------------------->
+
+<!-----------------Sponser - Section------------------->
+
+
+<div class="clints">
+    <h3 class="title">CORPORATE CLIENTS</h3>
+    <h3 class="sub-title">MORE THAN 2000  <span> Sponsers & partners</span></h3>
+
+    <div class="clints-logo container">
+        <div class="row">
+            <div class="col-sm-3 col-lg-2 offset-md-1 bg" *ngFor="let logo of clintsLogo;let i=index;">
+                <img class="logo-{{i+1}}" src="{{logo.logo}}" alt="clint-logo">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!----------------------------------------------------->
+
+<!----------Contact-us Component Selector-------------->
+
+<app-contact-us id="contact-us"></app-contact-us>
+
+<!----------------------------------------------------->
+
+<!---------Popup Submit Form Component Selector-------->
+
+<app-submit-ask class="show"></app-submit-ask>
+
+<!----------------------------------------------------->

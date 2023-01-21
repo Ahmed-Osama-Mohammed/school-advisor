@@ -1,0 +1,55 @@
+.ask{
+	position: fixed;
+	text-align: center;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	background-color: #4c4c4cd1;
+
+}
+.contain{
+    background: white;
+	width: 30%;
+	margin: 0 auto;
+	border: 0.05208vw solid darkgray;
+	box-shadow: grey 0.05208vw 0.05208vw 0.15625vw;
+	margin-top: 8.59375vw;
+	filter: drop-shadow(0.10417vw 0.20833vw 0.3125vw black);
+}
+h3.text{
+    font-size: 19px;
+    text-transform: capitalize;
+    padding: 0 5%;
+    color: gray;
+    margin: 20px 0;
+}
+
+.btn-0:hover{
+    background-color: #cc353e;
+    transform: scale(1.1);
+}
+.btn-0{
+    color: white;
+    text-decoration: none;
+    background: var(--maincolor1);
+    width: 150px;
+    padding: 1% 3%;
+    height: 40px;
+    margin: 30px 0;
+    transition: all linear .8s;
+}
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--maincolor1)5e;
+    opacity: 1;
+}
+.btn-close{
+    margin-top: 20px;
+}
+@media screen and (max-width:800px){
+    .contain{
+        width: fit-content;
+    }
+}

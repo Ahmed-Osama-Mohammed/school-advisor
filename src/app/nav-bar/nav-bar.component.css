@@ -1,0 +1,134 @@
+img {
+  width: 180px;
+  margin-left: 40px;
+}
+
+div#navbarSupportedContent {
+  justify-content: flex-end;
+}
+
+.unfix {
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 8%;
+  box-shadow: 0px 0px 20px white;
+  border: 1px solid whitesmoke;
+  z-index: 9;
+}
+
+.fix {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0px 0px 20px white;
+  border: 1px solid whitesmoke;
+  height: auto
+}
+
+.active {
+  color: var(--maincolor1) !important;
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.dropdown-menu:hover,
+.dropdown-item:hover {
+  color: var(--maincolor1) !important;
+}
+
+.dropdown-item:hover .arrow {
+  display: inline-block
+}
+
+.dropdown-item {
+  color: #28272c;
+  text-transform: uppercase;
+  transition: all linear .4s;
+  font-size: 15px;
+
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -34px;
+}
+
+.dropdown-menu {
+  min-width: 13rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin: 0 13px;
+  text-transform: uppercase;
+}
+
+.top {
+  height: 130px;
+  background: #26272b;
+}
+
+.bottom {
+  height: 130px;
+  background: #f6f6f6;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.arrow {
+  font: 23px;
+  display: none;
+}
+
+input.search-input::placeholder {
+  color: white;
+}
+
+input.search-input:focus-visible {
+  background: var(--maincolor1);
+  border: none;
+  outline: none;
+}
+
+input.search-input {
+  border-radius: 50px;
+  border: none;
+  color: white;
+  position: relative;
+  bottom: 8px;
+  height: 35px;
+  background: #28272c;
+  text-align: center;
+  padding: 0;
+  width: 0;
+  transition: all linear .8s;
+  margin: 8px 0;
+}
+button.nav-link.btn.open,a.nav-link.btn.search-btn{
+    box-shadow:unset
+}
+.mat-progress-bar-fill::after {
+  background-color: var(--maincolor1);
+}
+.search-btn {
+  display: none;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  top: 0;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background: #fff;
+}
+
+@media screen and (max-width:400px) {
+  .input.search-input {
+    width: auto !important;
+  }
+}

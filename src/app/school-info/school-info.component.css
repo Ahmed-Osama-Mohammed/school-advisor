@@ -1,0 +1,135 @@
+.school-info{
+    padding:50px 0 100px;
+    background: #fdfdfd;
+}
+h1.title {
+    text-transform: uppercase;
+      text-align: center;
+      margin: 50px auto;
+      padding-bottom: 30px;
+      font-family: 'Oswald';
+      border-bottom: 1px solid;
+      width: 83%;
+      font-size: 34px;
+      letter-spacing: 6px;
+      color: var(--maincolor1);
+      border-color: gainsboro;
+  }
+  .img-container {
+    margin: 0 auto;
+    width: 95%;
+    height: 65%;
+    background: #e4e4e4;
+    box-shadow: 0px 0px 15px #a5a5a5;
+    border-radius: 10px;
+  }
+  .img-container img {
+      width: 95%;
+      height: 94%;
+      border: 2px solid #cecccc;
+      margin: 17px 13px;
+      border-radius: 8px;
+  }
+  .name{
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+  }
+  h3.basic {
+      font-size: 15px;
+      font-weight: 500;
+      color: #4f4f4f;
+  }
+h1.sub-title {
+    text-align: center;
+    margin: 40px 0 15px;
+    color: gray;
+    text-transform: capitalize;
+}
+.hr-0{
+    opacity:1;
+    margin: 0 auto 25px;
+    height: 4px;
+    width: 3%;
+    background: var(--maincolor1);
+}
+table th {
+    font-weight: 500;
+    width: 35% !important;
+    text-transform: capitalize;
+}
+th.basic {
+    height: 40px;
+    width: 26%;
+}
+td {
+    text-align: center;
+    width: 77%;
+    font-weight:300;
+    text-transform: capitalize;
+}
+p.info {
+    font-size: 16px;
+    padding: 20px 80px;
+}
+a:hover {
+    color: var(--maincolor1);
+}
+a {
+    text-decoration: none;
+    color: #4f4f4f;
+}
+.table tr:last-child{
+    border:none;
+    border: transparent;
+}
+
+.tube {
+    background: #e9ecef;
+    border: 1px solid gray;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+  }
+  
+  .green {
+    background: #198754
+  }
+  
+  .blue {
+    background: #0d6efd
+  }
+  
+  .yellow {
+    background: #ffc107
+  }
+  
+  .red {
+    background: #dc3545
+  }
+  
+  .instruction span {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    margin-right: 20px;
+  }
+  
+  .instruction {
+    text-align: center;
+    margin: 25px auto 0;
+    width: auto;
+    border: 1px solid #d2d2d2;
+    height: auto;
+    background: #fdfdfd;
+    padding: 1% 2% 1%;
+    }
+    td a{
+      text-transform:lowercase;
+    }

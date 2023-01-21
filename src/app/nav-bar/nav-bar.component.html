@@ -1,0 +1,94 @@
+<div class="top"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light unfix"(scroll)="onWindowScroll();" >
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['']">
+            <img src="../../assets/images/logo6.png" alt="Logo"  />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"  [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">Home</a>
+                </li>
+                
+                <li class="nav-item dropdown"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false"  [ngClass]="{'active': rlRef.isActive||rlRef1.isActive||rlRef2.isActive||rlRef3.isActive||rlRef4.isActive}" >
+                        Schools
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['recommended-schools']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef="routerLinkActive"><span class="arrow">&rarr;</span>Recommended Schools</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" [routerLink]="['feature-schools']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef1="routerLinkActive"><span class="arrow">&rarr;</span>Feature Schools</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" [routerLink]='["top-ranked"]' routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef2="routerLinkActive"><span class="arrow">&rarr;</span>Top Ranked Schools</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['search-school']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef3="routerLinkActive"><span class="arrow">&rarr;</span>Search for your school</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" [routerLink]="['compare-schools']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef4="routerLinkActive"><span class="arrow">&rarr;</span>compare between two schools</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['about-us']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                        true}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#contact-us">Contact Us </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" [ngClass]="{'active': rlRef5.isActive||rlRef6.isActive}">
+                     Join us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['become-apartner']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef5="routerLinkActive"><span class="arrow">&rarr;</span>Become a partner</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" [routerLink]="['ads']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                            true}"  #rlRef6 ="routerLinkActive"><span class="arrow">&rarr;</span>advertising with us</a></li>
+                       
+                      
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <input type='search' class='search-input' placeholder='Search'>
+                </li>
+                
+                <li class="nav-item">
+            <a class="nav-link btn search-btn" type="button"><i class="fa fa-search"></i></a>
+        </li>
+                <li class="nav-item">
+                    <button class="nav-link btn open" type="button" (click)="showSearchTab()"><i class="fa fa-search"></i></button>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+<div *ngIf="LoaderService.isLoading | async " class="loader">
+    <mat-progress-bar mode="indeterminate" color="accent" ></mat-progress-bar>    </div>
+
+<div class="bottom"></div>

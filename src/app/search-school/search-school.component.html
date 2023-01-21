@@ -1,0 +1,83 @@
+<div class="search-school">
+    <h3 class="title">Search for School</h3>
+    <h3 class="sub-title">Find the best school depending on your own decision</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+               <input type="checkbox" value="name" name="school-name" class="check" [(ngModel)]="searchName">
+                <label for="school-name">Search by school name</label>
+                <input type="text" class="fill" *ngIf="searchName" [(ngModel)]="name">
+            </div>
+            <div class="col-3">
+               <input type="checkbox" value="name" name="school-type" class="check" [(ngModel)]="searchtype">
+                <label for="school-name">Search by school type</label>
+                <div *ngIf="searchtype">
+                    <select name="type" [(ngModel)]="type">
+                    <option *ngFor="let type of types" value="{{type}}" class="fill"  >{{type}}</option>
+                    </select>               
+                </div>
+
+            </div>
+            <div class="col-3">
+               <input type="checkbox" value="name" name="school-place" class="check" [(ngModel)]="searchPlace">
+                <label for="school-place">Search by school location</label>
+                <div *ngIf="searchPlace">
+                    <select name="place" [(ngModel)]="place">
+                    <option *ngFor="let place of places" value="{{place}}" class="fill"  >{{place}}</option>
+                    </select>               
+                </div>
+            </div>
+            <div class="col-3">
+               <input type="checkbox" value="price" name="price" class="check"  [(ngModel)]="searchPrice">
+                <label for="school-name">Search by price</label>
+                <input type="range" min="10000" max="50000" step="10000" [(ngModel)]="price" *ngIf="searchPrice">
+                <p *ngIf="searchPrice">{{price |currency:'EGP '}}</p>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-0"(click)="onSubmit()">Submit</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="result" *ngIf="resultKey && filterdSchool.length>0">
+    <hr>
+    <div class="container">
+        <div class="row">
+
+                <a class="item col-sm-12 col-md-6 col-lg-4" href="" *ngFor="let school of filterdSchool"> 
+                    <span class="title">{{school.name}}</span>
+                    <img alt="" class="School-pic" src="../../assets/images/school-img.jpg">
+                    <span class="info">{{school.type}}</span>
+                    <span class="info">Fee:{{school.price}}</span>
+                    <span class="rate"><div class="progress">
+                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':school.rate}"
+                        [ngClass]="{'bg-warning':40>=school.rate&&school.price<60,'bg-primary':60<=school.rate &&school.rate<80,'bg-success':school.rate>80,'bg-danger':school.rate==0,'w':school.rate==0}"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="instruction">
+                            <div class="color green"></div>
+                            <span>excellent</span>
+                            <div class="color blue"></div>
+                            <span>good</span>
+                            <div class="color yellow"></div>
+                            <span>intermediate</span>
+                <div class="color red"></div>
+                <span>unrecognized</span>
+            </div>
+        </span>
+    </a>
+</div>
+</div>
+    </div>
+
+<div class="no-result" *ngIf="resultKey && filterdSchool.length==0">
+    <hr>
+    <div class="tt-empty-search">
+        <div class="tt-icon icon-g-84">
+            <div class="squre"></div>
+        </div>
+        <h2 class="tt-title">EMPTY</h2>
+        <p>There are no school matching your search.</p>
+      </div>
+</div>

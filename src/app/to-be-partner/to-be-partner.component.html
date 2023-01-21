@@ -1,0 +1,90 @@
+<div class="partner">
+    <h3 class="title">our service for schools</h3>
+    <div class="container">
+        <div class="row">
+            <div class="info col-lg-6">
+                <h2 class="sub-title">We Helps Schools Find More Best-Fit Students.</h2>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid blanditiis odio error quod nihil iusto, facilis rerum, neque consectetur voluptas deleniti a ipsam maxime officia laborum quo est, dolorum dignissimos.
+                    Quis deserunt, provident dolores sed temporibus placeat libero est magni, labore in exercitationem excepturi amet eos debitis minus reprehenderit voluptatem consequatur perferendis! Voluptatum, totam iste fuga sapiente officiis ipsa et.</p>
+                    <button type="button" class="btn btn-1" *ngIf="buttonKey" (click)="openForm()">Fill your school information</button>
+                </div>
+                <div class="col-lg-6">
+                    <form  [formGroup] = "PartnerForm" (ngSubmit) = "onSubmit()">
+                        <h3 class="fill">Contact Us to Learn More</h3>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6 space">
+                                    <label for="SchoolName"><span class="title">School Name</span><span class="req">*</span><br>
+                                        <input type="text"  name="SchoolName" formControlName="schoolName"><br>
+                                        <ng-container>
+                                            <span *ngIf="partnerFunction.schoolName?.invalid && (partnerFunction.schoolName?.touched || partnerFunction.schoolName?.dirty)" >School name is invalid</span>
+                                        </ng-container>
+                                    </label><br>
+                                </div>
+                                <div class="col-6 spaced">
+                                    <label for="type"><span class="title">School type</span><span class="req">*</span></label><br>
+                                    <select name="type" formControlName="type">
+                                      <option value="American">American</option>
+                                      <option value="british">British</option>
+                                      <option value="ip">Ip</option>
+                                      <option value="ig">Ig</option>
+                                      <option value="private">Private</option>
+                                      <option value="religion">Religion</option>
+                                    </select>
+                                
+                                  </div>
+                                <div class="col-12 space">
+                                    <label for="name"><span class="title">Your Name</span><span class="req">*</span><br>
+                                  <input type="text"  name="name" formControlName="name"><br>
+                                  <ng-container>
+                                      <span *ngIf="partnerFunction.name?.invalid && (partnerFunction.name?.touched || partnerFunction.name?.dirty)" >name is invalid</span>
+                                  </ng-container>
+                              </label><br>
+                          </div>
+                          
+                          <div class="col-12 space">
+                              <label for="email"><span class="title">Email</span><span class="req">*</span><br>
+                                  <input type="text"  name="email" formControlName="email"><br>
+                                  <span *ngIf="partnerFunction.email?.invalid && (partnerFunction.email?.touched || partnerFunction.email?.dirty) || partnerFunction.email?.errors?.invalidName" >This email is invalid</span>
+                                  
+                              </label><br>
+                              
+                          </div>
+                          <div class="col-12 space">
+                              
+                          <label for="title"><span class="title">Your Title</span><span class="req">*</span></label><br>
+                          <input type="text"  title="phone" formControlName="title"><br>
+                          <span *ngIf="partnerFunction.title?.errors?.invalidName">please enter your title</span>
+                          
+                        </div>
+                          <div class="col-12 space">
+                              
+                          <label for="phone"><span class="title">Phone</span></label><br>
+                          <input type="text"  name="phone" formControlName="phone"><br>
+                          <span *ngIf="partnerFunction.phone?.errors?.invalidName">please enter a phone number</span>
+                          
+                        </div>
+                        
+                          
+                          <div class="col-12 ">
+                              <button type="submit" [disabled]="PartnerForm.invalid" [ngStyle]="{'background-color':PartnerForm.invalid? '#2d2d32' : ' var(--maincolor1)' }" >Submit</button>
+                          </div>
+                        </div>
+                    </div>
+                  </form>
+                  <div class="form-success">
+                      <h2 class="success">
+                          Your info has sent to us succefully,
+                        </h2>
+                        <h2 class="success">
+                            we will contact with you as soon as possible .
+                        </h2>
+                        <h2 class="secounds">
+                            you will return to home page in {{time}} secounds .
+                        </h2>
+
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,253 @@
+<div class="Ranking">
+  <div class="top-school">
+
+    <h3 class="title">Top Ranked Schools</h3>
+    <h3 class="sub-title">2021 Most Diverse Schools in Egypt</h3>
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A maxime cum iste, ut nesciunt provident
+      fugiat? Cum, ab quisquam quaerat facilis accusamus voluptas velit dolorem aspernatur totam eum est natus.
+      Dolor odit, culpa sint magni fugiat eius quos doloribus impedit exercitationem qui! Soluta, perferendis provident a,
+      modi libero delectus animi vitae voluptatum perspiciatis nam deleniti, fuga officia dolorum blanditiis voluptate.
+    </p>
+  </div>
+  <div class="contain">
+    <div class="row">
+      <div class="col-3 filter">
+        <section id="filters" data-auto-filter="true">
+          <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+          <h5>Filters</h5>
+
+          <!-- Section: Condition -->
+          <section class="mb-4" data-filter="condition">
+            <h6 class="font-weight-bold mb-3">Basic</h6>
+
+            <div class="form-check mb-3">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                School Type:
+              </label>
+              <select name="type" [(ngModel)]="type" (change)="filter('type')">
+                <option *ngFor="let type of types" value="{{type}}" class="fill">{{type}}</option>
+              </select>
+            </div>
+
+            <div class="form-check mb-3">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                School Location:
+              </label>
+              <select name="location" [(ngModel)]="city" (change)="filter('government')">
+                <option *ngFor="let city of cities" value="{{city}}" class="fill">{{city}}</option>
+              </select>
+            </div>
+
+            <div class="form-check mb-3">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Grade:
+              </label>
+              <select name="grade" [(ngModel)]="grade" (change)="filter('grade')">
+                <option *ngFor="let grade of grades" value="{{grade}}" class="fill">{{grade}}</option>
+              </select>
+            </div>
+
+            <div class="form-check mb-3">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                gender:
+              </label>
+              <select name="gender" [(ngModel)]="gender" (change)="filter('gender')">
+                <option *ngFor="let gender of genders" value="{{gender}}" class="fill">{{gender}}</option>
+              </select>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" [(ngModel)]='exambody' (change)="filter('exambody')">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Body Exam</label>
+            </div>
+          </section>
+          <!-- Section: Condition -->
+
+          <!-- Section: Rating -->
+          <section class="mb-4">
+            <h6 class="font-weight-bold mb-3">overalls</h6>
+
+            <button class="face" placement="top" ngbTooltip="Excellent">😄 </button>
+            <button class="face" placement="top" ngbTooltip="very Good">😀 </button>
+            <button class="face" placement="top" ngbTooltip="Good">🙂 </button>
+            <button class="face" placement="top" ngbTooltip="Fair">😐 </button>
+            <button class="face" placement="top" ngbTooltip="Bad">☹️ </button>
+          </section>
+          <!-- Section: overalling -->
+
+          <!-- Section: Price -->
+          <section class="mb-4">
+            <h6 class="font-weight-bold mb-3">Fee</h6>
+
+            <div class="form-check mb-3">
+              <input type="range" min="0" max="200000" step="2000" [(ngModel)]="price">
+              <p class="range" *ngIf="price>0">From<span class="value"> 0 EGP</span> to <span class="value">{{price}}
+                  EGP</span></p>
+            </div>
+          </section>
+          <!-- Section: Price -->
+
+          <!-- Section: extra activity -->
+          <section class="mb-4">
+            <h6 class="font-weight-bold mb-3">Extra Education Activity</h6>
+
+            <div class="form-check mb-3">
+              <select name="activity" [(ngModel)]="activity">
+                <option *ngFor="let activity of activities" value="{{activity}}" class="fill">{{activity}}</option>
+              </select>
+            </div>
+          </section>
+          <!-- Section: extra activity -->
+
+          <!-- Section: Relegious -->
+          <section class="mb-4">
+            <h6 class="font-weight-bold mb-3">Religions schools</h6>
+
+            <div class="form-check mb-5 ">
+              <select name="activity" [(ngModel)]="Religion">
+                <option *ngFor="let Religion of Religions" value="{{Religion}}" class="fill">{{Religion}}</option>
+              </select>
+            </div>
+          </section>
+          <!-- Section: Relegious -->
+        </section>
+      </div>
+      <div class="col-9 result">
+        <label class="text-uppercase small text-muted">
+          Sorting Type:
+        </label>
+        <select class="sort" name="type" (change)="divsSort()" [(ngModel)]="sort">
+          <option value="Top Ranked School" class="fill" selected>Top Ranked Schools</option>
+          <option value="Recommended Schools" class="fill">Recommended Schools</option>
+          <option value="Featured schools" class="fill">Featured Schools</option>
+          <option value="Name Ascending" class="fill">Name Ascending</option>
+          <option value="Name Descending" class="fill">Name Descending</option>
+          <option value="Fee Ascending" class="fill">Fee Ascending</option>
+          <option value="Fee Descending" class="fill">Fee Descending</option>
+        </select>
+        <button type="button" class="three-divs bord" (click)="showThreeDiv()"><i class="fa fa-bars"></i></button>
+        <button type="button" class="one-div" (click)="showOneDiv()"><i class="fa fa-square"></i></button>
+        <!-- <button type="button" class="list-table" (click)="showThreeDiv()"><i class="fa fa-list"></i></button> -->
+        <button type="button" class="btn btn-00" (click)="openFilter()"><i class="fa fa-filter"></i> Filter</button>
+        <div class="Search-result" (click)="close()">
+          <div class="row">
+            <ng-container *ngIf="showKey">
+              <div class="col-md-6 col-lg-4 item" *ngFor="let school of allSchools">
+                <div *ngIf="school.recommended||school.featured" class="tringle"></div>
+                <div *ngIf="school.recommended" class="boxed">
+                  <h2>Recommended</h2>
+                </div>
+                <div *ngIf="school.featured" class="boxed">
+                  <h2>Featured</h2>
+                </div>
+                <span class="ranked">{{school.rank}}#</span>
+                <span class="face" *ngIf="80<school.overall " placement="top" ngbTooltip="Excellent">😄 </span>
+                <span class="face" *ngIf="70<school.overall&&school.overall<=80" placement="top"
+                  ngbTooltip="Very Good">😀
+                </span>
+                <span class="face" *ngIf="60<school.overall&&school.overall<=70" placement="top" ngbTooltip="Good">🙂
+                </span>
+                <span class="face" *ngIf="50<=school.overall&&school.overall<=60" placement="top" ngbTooltip="Fair">😐
+                </span>
+                <span class="face" *ngIf="0<school.overall&&school.overall<50" placement="top" ngbTooltip="Bad">☹️
+                </span>{{school.overall}}%
+                <span class="title">{{school.name}}</span>
+                <img alt="" class="School-pic" src="../../assets/images/school-img.jpg">
+                <span class="info">{{school.type}}</span>
+                <span class="info">{{school.government}}</span>
+                <p class="school-info">lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                  lorem ipsum dolor sit amet
+                  lorem ipsum dolor sit amet
+                </p>
+                <span class="info">Fee:{{school.fee}}</span>
+                <span class="rate">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':school.overall}"
+                      [ngClass]="{'bg-warning':school.overall&&school.overall<60,'bg-primary':60<=school.overall &&school.overall<80,'bg-success':school.overall>80,'bg-danger':school.overall==0,'w':school.overall==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{school.overall}}%</div>
+                  </div>
+                  <div class="instruction">
+                    <div class="box">
+                      <div class="color green"></div>
+                      <span>excellent</span>
+                    </div>
+                    <div class="box">
+                      <div class="color blue"></div>
+                      <span>good</span>
+                    </div>
+                    <div class="box">
+                      <div class="color yellow"></div>
+                      <span>intermediate</span>
+                    </div>
+                    <div class="box">
+                      <div class="color red"></div>
+                      <span>unrecognized</span>
+                    </div>
+                  </div>
+                </span>
+                <a [routerLink]="['/school-details']" [queryParams]="{name:school.name}"><button class="btn btn-0">Show Full Info</button></a>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="!showKey">
+              <div class="col-12 one-item" *ngFor="let school of allSchools">
+                <img src="../../assets/images/school-img.jpg">
+                <div *ngIf="school.recommended||school.featured" class="one-tringle"></div>
+                <div *ngIf="school.recommended" class="boxed one-boxed">
+                  <h2>Recommended</h2>
+                </div>
+                <div *ngIf="school.featured" class="boxed one-boxed">
+                  <h2>Featured</h2>
+                </div>
+                <h1 class="one-ranked">{{school.rank}}#</h1>
+                <h1 class="one-title">{{school.name}}</h1>
+                <h1 class="one-info ">School Type: {{school.type}}</h1>
+                <span class="one-info">Overall: <span class="face" *ngIf="80<school.overall " placement="top"
+                    ngbTooltip="Excellent">😄 </span>
+                  <span class="face" *ngIf="70<school.overall&&school.overall<=80" placement="top"
+                    ngbTooltip="Very Good">😀 </span>
+                  <span class="face" *ngIf="60<school.overall&&school.overall<=70" placement="top" ngbTooltip="Good">🙂
+                  </span>
+                  <span class="face" *ngIf="50<=school.overall&&school.overall<=60" placement="top" ngbTooltip="Fair">😐
+                  </span>
+                  <span class="face" *ngIf="0<school.overall&&school.overall<50" placement="top" ngbTooltip="Bad">☹️
+                  </span>{{school.overall}}%</span>
+                <h1 class="one-info">{{school.government}}</h1>
+                <h1 class="one-info">Fee :{{school.fee}} EGP</h1>
+
+                <p class="school-one-info">lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit
+                  amet
+                  lorem ipsum dolor sit amet
+                  lorem ipsum dolor sit amet
+                </p>
+                <div class="progress one-progress">
+                  <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':school.overall}"
+                    [ngClass]="{'bg-warning':school.overall&&school.overall<60,'bg-primary':60<=school.overall &&school.overall<80,'bg-success':school.overall>80,'bg-danger':school.overall==0,'w':school.overall==0}"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{school.overall}}%</div>
+                </div>
+                <div class="instruction">
+                  <div class="box">
+                    <div class="color green"></div>
+                    <span>excellent</span>
+                  </div>
+                  <div class="box">
+                    <div class="color blue"></div>
+                    <span>good</span>
+                  </div>
+                  <div class="box">
+                    <div class="color yellow"></div>
+                    <span>intermediate</span>
+                  </div>
+                  <div class="box">
+                    <div class="color red"></div>
+                    <span>unrecognized</span>
+                  </div>
+                </div>
+                <a [routerLink]="['/school-details']" [queryParams]="{name:school.name}"> <button class="btn btn-1">Show Full Info</button></a>
+              </div>
+            </ng-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,225 @@
+<div class="school-info">
+    <h1 class="title">School Info</h1>
+    <div  class="container"><div  class="row"><div  class="col-sm-12 col-lg-6">
+        <div class="img-container"><img  src="../../assets/images/school-img.jpg"></div>
+        <h1 class="sub-title">Special Info</h1>
+        <hr class="hr-0">
+        <p class="info">lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
+    </div>
+    <div class="col-sm-12 col-lg-6">
+        <h1 class="sub-title">Basic Info</h1>
+        <hr class="hr-0">
+        <table class="table">
+            <tbody>
+              <tr>
+                <th class="basic name">School Name :</th>
+                <td>{{schoolData.name}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">School Type :</th>
+                <td>{{schoolData.type}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">Rank :</th>
+                <td>{{schoolData.rank}}</td>
+                </tr>
+              <tr>
+              <tr>
+                <th class="basic ">Overall Ranking :</th>
+                <td> <span  class="face"  *ngIf="80<schoolData.overall " placement="top" ngbTooltip="Excellent">😄 </span>
+                    <span  class="face"  *ngIf="70<schoolData.overall&&schoolData.overall<=80" placement="top" ngbTooltip="Very Good">😀 </span>
+                    <span  class="face"  *ngIf="60<schoolData.overall&&schoolData.overall<=70" placement="top" ngbTooltip="Good">🙂 </span>
+                    <span  class="face"  *ngIf="50<=schoolData.overall&&schoolData.overall<=60" placement="top" ngbTooltip="Fair" >😐 </span>
+                    <span  class="face"  *ngIf="0<schoolData.overall&&schoolData.overall<50" placement="top" ngbTooltip="Bad">☹️ </span>{{schoolData.overall}}%</td>
+                </tr>
+              <tr>
+                <th class="basic ">School Location :</th>
+                <td>{{schoolData.government}} / {{schoolData.city}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">Address :</th>
+                <td>{{schoolData.address}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">Fee :</th>
+                <td>{{schoolData.fee|currency:"EGP "}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">Grade</th>
+                <td>{{schoolData.grade}}</td>
+                </tr>
+              <tr>
+                <th class="basic ">Gender</th>
+                <td>{{schoolData.gender}}</td>
+                </tr>
+              <tr>
+                <th class="basic">Exam body :</th>
+                <td><span *ngIf="schoolData.examBody">Yes</span></td>
+                <td><span *ngIf="!schoolData.examBody" >No</span></td>
+                </tr>
+             
+
+                </tbody>
+                </table>
+      <hr>
+    </div>
+    <div class="col-12">
+        <h1 class="sub-title">contact Info</h1>
+        <hr class="hr-0">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th class="contact ">School Web Link</th>
+              <td><a href="{{schoolData.webLink}}" target="_blank">{{schoolData.webLink}}</a></td>
+              </tr>
+            <tr>
+              <th class="basic ">School Email :</th>
+              <td><a href="mailto:{{schoolData.email}}">{{schoolData.email}}</a></td>
+              </tr>
+            <tr>
+              <th class="basic ">School phone :</th>
+              <td>{{schoolData.phone}}</td>
+              </tr>
+              </tbody>
+              </table>
+        <hr>
+        <div class="ranking" (scroll)="onWindowScroll()">
+          <h1 class="sub-title">rating Info</h1>
+          <hr class="hr-0">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>rate1</th>
+                <td>
+                  <div class="tube">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate1}"
+                      [ngClass]="{'bg-warning': schoolData.rate1&&schoolData.rate1<60,'bg-primary':60<=schoolData.rate1 &&schoolData.rate1<80,'bg-success':schoolData.rate1>80,'bg-danger':schoolData.rate1==0,'w':schoolData.rate1==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate1}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate2</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate2}"
+                      [ngClass]="{'bg-warning': schoolData.rate2&&schoolData.rate2<60,'bg-primary':60<=schoolData.rate2 &&schoolData.rate2<80,'bg-success':schoolData.rate2>80,'bg-danger':schoolData.rate2==0,'w':schoolData.rate2==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate2}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate3</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate3}"
+                      [ngClass]="{'bg-warning': schoolData.rate3&&schoolData.rate3<60,'bg-primary':60<=schoolData.rate3 &&schoolData.rate3<80,'bg-success':schoolData.rate3>80,'bg-danger':schoolData.rate3==0,'w':schoolData.rate3==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate3}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate4</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate4}"
+                      [ngClass]="{'bg-warning': schoolData.rate4&&schoolData.rate4<60,'bg-primary':60<=schoolData.rate4 &&schoolData.rate4<80,'bg-success':schoolData.rate4>80,'bg-danger':schoolData.rate4==0,'w':schoolData.rate4==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate4}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate5</th>
+                <td>
+                  <div class="tube">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate5}"
+                      [ngClass]="{'bg-warning': schoolData.rate5&&schoolData.rate5<60,'bg-primary':60<=schoolData.rate5 &&schoolData.rate5<80,'bg-success':schoolData.rate5>80,'bg-danger':schoolData.rate5==0,'w':schoolData.rate5==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate5}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate6</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate6}"
+                      [ngClass]="{'bg-warning': schoolData.rate6&&schoolData.rate6<60,'bg-primary':60<=schoolData.rate6 &&schoolData.rate6<80,'bg-success':schoolData.rate6>80,'bg-danger':schoolData.rate6==0,'w':schoolData.rate6==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate6}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate7</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate7}"
+                      [ngClass]="{'bg-warning': schoolData.rate7&&schoolData.rate7<60,'bg-primary':60<=schoolData.rate7 &&schoolData.rate7<80,'bg-success':schoolData.rate7>80,'bg-danger':schoolData.rate7==0,'w':schoolData.rate7==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate7}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate8</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate8}"
+                      [ngClass]="{'bg-warning': schoolData.rate8&&schoolData.rate8<60,'bg-primary':60<=schoolData.rate8 &&schoolData.rate8<80,'bg-success':schoolData.rate8>80,'bg-danger':schoolData.rate8==0,'w':schoolData.rate8==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate8}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate9</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate9}"
+                      [ngClass]="{'bg-warning': schoolData.rate9&&schoolData.rate9<60,'bg-primary':60<=schoolData.rate9 &&schoolData.rate9<80,'bg-success':schoolData.rate9>80,'bg-danger':schoolData.rate9==0,'w':schoolData.rate9==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate9}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>rate10</th>
+                <td>
+                  <div class="tube">
+
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':rate10}"
+                      [ngClass]="{'bg-warning': schoolData.rate10&&schoolData.rate10<60,'bg-primary':60<=schoolData.rate10 &&schoolData.rate10<80,'bg-success':schoolData.rate10>80,'bg-danger':schoolData.rate10==0,'w':schoolData.rate10==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{rate10}}%</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>overall rate</th>
+                <td>
+                  <div class="tube">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':overall}"
+                      [ngClass]="{'bg-warning': schoolData.overall&&schoolData.overall<60,'bg-primary':60<=schoolData.overall &&schoolData.overall<80,'bg-success':schoolData.overall>80,'bg-danger':schoolData.overall==0,'w':schoolData.overall==0}"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{overall}}%</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="instruction">
+            <div class="color green"></div>
+            <span>excellent</span>
+            <div class="color blue"></div>
+            <span>good</span>
+            <div class="color yellow"></div>
+            <span>intermediate</span>
+            <div class="color red"></div>
+            <span>unrecognized</span>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    

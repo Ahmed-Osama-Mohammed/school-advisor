@@ -1,0 +1,91 @@
+.search-school{
+    text-align: center;
+    padding: 100px 0 50px;
+}
+h3.title {
+    color: var(--maincolor1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+    font-family: 'Poppins', sans-serif;
+}
+h3.sub-title {
+    padding: 4px 25% 50px;    color: #27282c;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.check{
+    margin:0 10px
+}
+label{
+    background: linear-gradient( to right, hsl(0deg 100% 62%), #24282b );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+select:focus{
+    border:2px solid var(--maincolor1);
+}
+input:focus-visible{
+    border:2px solid var(--maincolor1);
+    outline:none;
+}
+.btn-0{
+    color: white;
+    text-decoration: none;
+    background: var(--maincolor1);
+    width: 150px;
+    padding: 1% 3%;
+    min-height: 40px;
+    transition: all linear .8s;
+    margin-top: 100px;
+}
+.btn-0:hover{
+    background-color: #cc353e;
+    transform: scale(1.1);
+}
+.w{
+    width:100% !important
+}
+.color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+.green{
+    background:#198754
+}
+.blue{
+    background:#0d6efd 
+}
+.yellow{
+    background:#ffc107
+}
+.red{
+    background:#dc3545
+}
+.instruction {
+    margin: 10px 0;
+}
+.instruction span{
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin: 1px;
+}
+.progress{
+    margin: 0 auto;
+    width: 98%;
+}
+@media screen and (max-width:786px){
+    .instruction span{
+        font-size: 15px;
+    }
+
+}

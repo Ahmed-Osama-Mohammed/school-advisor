@@ -1,0 +1,454 @@
+.inner-content {
+  position: relative;
+  display: block;
+  padding: 400px 0 0;
+}
+
+.inner-content .title {
+  position: relative;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 100px;
+}
+
+.inner-content .title:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 4px;
+  background: #ffffff;
+  content: "";
+}
+
+.inner-content .title h1 {
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.about-us {
+  background: linear-gradient(45deg, #0000005e, #0000005e), url(../../assets/images/about-us3.jpg);
+  position: relative;
+  background-attachment: scroll;
+  background-position: 40% top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 0 0px;
+}
+
+.info .title {
+  padding-top: 75px;
+  padding-bottom: 15px;
+  color: var(--maincolor1);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info .sub-title {
+  padding: 0 66px 77px 0;
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info h3.sub-title span {
+  font-weight: 400;
+}
+
+.text {
+  display: block;
+  max-width: 640px;
+  height: 345px;
+  width: 100%;
+  font-size: 16px;
+  padding-top: 123px;
+  top: 0;
+  text-transform: capitalize;
+  color: #828282;
+}
+
+.tringle {
+  border-radius: 4px;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  height: 13px;
+  top: 40px;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 0;
+  width: 16px;
+  background: var(--maincolor1);
+}
+
+.carous-title {
+  margin: 75px 0 0 75px;
+  position: relative;
+  display: block;
+  width: 130px;
+  background: #e9212e;
+  text-align: center;
+  z-index: 1;
+}
+
+.carous-title h3 {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 500;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+}
+
+img.case-img {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    
+}
+.carous-sub-title h3{
+    padding: 50px 0 40px 75px;
+    color: #27282c;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.carous-text{
+    padding: 0 0 40px 75px;
+    text-align: justify;
+    line-height: 22px;
+    height:fit-content;
+}
+button.carousel-control-prev {
+    position: absolute;
+    left: -130px;
+}
+button.carousel-control-next {
+    position: absolute;
+    right: -130px;
+}
+.carous-info{
+    height:500px
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: -65px;
+}
+.box{
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 10px #e2e2e2;
+    background:white
+}
+.bg-0{
+    height:200px;
+    background:white
+}
+.bg-1{
+    background: #f6f6f6;
+    height: 370px;
+}
+.move {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 105px;
+}
+.process {
+    position: relative;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: var(--maincolor1);
+}
+h2.count {
+    float: right;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 17px;
+}
+h2.inf {
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.counter {
+    padding: 50px 0;
+    background: #f6f6f6;
+    height: 175px;
+}
+
+
+
+
+
+.team-area {
+    position: relative;
+    display: block;
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+.sec-title {
+    position: relative;
+    display: block;
+    margin-top: -5px;
+    padding-bottom: 50px;
+}
+.sec-title p {
+    color: #e9212e;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+    font-family: 'Poppins', sans-serif;
+}
+.sec-title .title {
+    padding: 0;
+    position: relative;
+    display: block;
+    color: #27282c;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.sec-title .title span {
+    font-weight: 400;
+}
+.view-all-member.style2 {
+    margin: 0px 0 0;
+}
+.view-all-member {
+    position: relative;
+    display: block;
+    margin-top: 39px;
+}
+.view-all-member.style2 a {
+    line-height: 56px;
+    text-decoration: none;
+}
+.btn-one {
+    position: relative;
+    display: inline-block;
+    background: #e9212e;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 60px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Rubik', sans-serif;
+    padding: 0 30px 0;
+    transition: all 500ms ease;
+}
+.single-team-member .overlay .box .link {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.single-team-member {
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+    transition: all 500ms ease;
+}
+.single-team-member .img-holder {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.single-team-member .overlay .box .link a {
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.single-team-member .img-holder img {
+    width: 100%;
+    transform: scale(1.0);
+    transition: all 700ms ease;
+    height: 300px;
+    transition: all 700ms ease;
+}
+.single-team-member:hover .img-holder img{
+    width: 100%;
+    transform: scale(1.0);
+    transform: scale(1.1);
+    filter: blur(1px);
+}
+.single-team-member:hover ul.sociallinks {
+    opacity: 1;
+}
+ul.sociallinks {
+    opacity: 0;
+    transition: all 700ms ease;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    background: white;
+    width: 100%;
+    border: 1px solid whitesmoke;
+    height: 40px;
+}
+li {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    border-right: 1px solid whitesmoke;
+    padding-top: 10px;
+}
+
+.sociallinks :hover {color: black}
+.sociallinks a{
+    color: var(--maincolor1);
+    font-size: 21px;
+    transition: all linear .5s;
+}
+
+
+.single-team-member .name {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 24px 0 24px;
+    transition: all 700ms ease 600ms;
+    -webkit-box-shadow: 0px 3px 7px 1px #f3f3f3;
+    box-shadow: 0px 3px 7px 1px #f3f3f3;
+}
+.single-team-member .name p {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    margin: 0;
+    line-height: 20px;
+    padding: 0 30px;
+    z-index: 1;
+}
+.single-team-member .name p span {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    padding: 0 10px;
+    color: #828282;
+    line-height: 20px;
+    margin: 0;
+    z-index: 2;
+    text-transform: capitalize;
+}
+.single-team-member .name h3 {
+    color: #27282c;
+    font-weight: 600;
+    margin: 8px 0 0;
+    text-transform: capitalize;
+}
+
+
+.clints .title {
+    padding: 0;
+    color: var(--maincolor1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .clints .sub-title {
+    padding: 0 32%;
+    padding-bottom: 50px;
+    color: #27282c;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .clints .sub-title span {
+    font-weight: 400;
+  }
+  
+  .clints {
+    text-align: center;
+    padding: 100px 0 60px;
+    background: #f6f6f6;
+  }
+  
+  .clints img:hover {
+    transform: rotateY(360deg) scale(1.2);
+  }
+  
+  .clints img {
+    width: 100%;
+    height: auto;
+    transition: all linear .8s;
+  }
+  
+  .bg {
+    background: white;
+    margin-bottom: 35px;
+  }
+  
+  img.logo-2 {
+    margin: 50% auto;
+  }
+  
+  img.logo-3 {
+    margin: 43% auto;
+  }
+  
+  img.logo-4 {
+    margin: 42% auto;
+  }
+  
+  img.logo-5 {
+    margin: 8% auto;
+  }
+  
+  img.logo-6 {
+    margin: 40% auto;
+  }
+  
+  img.logo-7 {
+    margin: 40% auto;
+  }
+  
+  img.logo-8 {
+    margin: 40% auto;
+  }
+
+
+
+@media screen and (max-width:1200px){
+    img.case-img {
+        width: 100%;
+        position: unset;
+        height: 100%;
+    }
+    .bg-0,
+    .bg-1{
+ display: none;
+    }
+    .move {
+        background: white;
+        position: unset;
+    }
+
+}
+
+@media screen and (max-width:990px){
+    .process {
+        position: relative;
+        height: 1050px;
+}
+}

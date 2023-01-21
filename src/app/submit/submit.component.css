@@ -1,0 +1,36 @@
+.bg-img{
+    background: url(../../assets/images/submit.jpg);
+    background-size: cover;
+    background-position: 32%;
+}
+.text{
+    text-align: center;
+    padding: 0 40px 35px;
+    text-align: center;
+    color: #6c757d !important;
+    font-size: unset;
+}
+.contain{
+    padding: 0 4%;
+}
+input{
+    width: 100%;
+}
+select{
+    margin-left: 10px;
+    width: 100%;
+}
+button{
+    margin: 0;
+    margin-bottom: 50px;
+}
+.form-success {
+    padding: 22% 0;
+}
+.secounds{
+    text-align: center;
+    padding: 10px 127px 0;
+    font-size: 17px;
+    font-family: 'Oswald';
+    color: gray;
+}

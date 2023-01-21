@@ -1,0 +1,35 @@
+<div class="rec-school">
+    <h3 class="title">Recommended Schools</h3>
+    <h3 class="sub-title">Lorem, ipsum dolor sit amet </h3>
+    <p class="text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, aspernatur dolor magni magnam consectetur dolorum itaque accusantium vel nobis atque nemo qui voluptas, deleniti omnis debitis maxime quia? Autem, molestias?</p>
+</div>
+<div class="result">
+    <hr>
+    <div class="container">
+        <div class="row">
+
+                <a class="item col-sm-12 col-md-6 col-lg-4" href="" *ngFor="let school of recommendedSchools"> 
+                    <span class="title">{{school.name}}</span>
+                    <img alt="" class="School-pic" src="../../assets/images/school-img.jpg">
+                    <span class="info">{{school.type}}</span>
+                    <span class="info">Fee:{{school.price}}</span>
+                    <span class="rate"><div class="progress">
+                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':school.rate}"
+                        [ngClass]="{'bg-warning':40<=school.rate&&school.rate<60,'bg-primary':60<=school.rate &&school.rate<80,'bg-success':school.rate>80,'bg-danger':school.rate==0,'w':school.rate==0}"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="instruction">
+                            <div class="color green"></div>
+                            <span>excellent</span>
+                            <div class="color blue"></div>
+                            <span>good</span>
+                            <div class="color yellow"></div>
+                            <span>intermediate</span>
+                <div class="color red"></div>
+                <span>unrecognized</span>
+            </div>
+        </span>
+    </a>
+</div>
+</div>
+    </div>

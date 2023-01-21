@@ -1,0 +1,63 @@
+<div class="contact-us" id="contact-us">
+    <div class="container">
+        <div class="row bg">
+            <div class="col-md-12 col-lg-6 p-0">
+                <img src="../../assets/images/contact3.jpg">
+            </div>
+            <div class="col-md-12 col-lg-6 form">
+                <h3>for inquires or questions</h3>
+                <p class="text-muted">want to hear more how we can help you in anything or other inquires? please feel free to send us a massage</p>
+                <form [formGroup] = "ContactForm" (ngSubmit) = "onSubmit()">
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-6 space">
+                              <label for="name"><span class="title">Name</span><span class="req">*</span><br>
+                                  <input type="text"  name="name" formControlName="name"><br>
+                                  <ng-container>
+                                      <span *ngIf="contactFunction.name?.invalid && (contactFunction.name?.touched || contactFunction.name?.dirty) || contactFunction.name?.errors?.invalidName" >Name is invalid</span>
+                                  </ng-container>
+                              </label><br>
+                          </div>
+                          
+                          <div class="col-md-6 space">
+                              <label for="email"><span class="title">Email</span><span class="req">*</span><br>
+                                  <input type="text"  name="email" formControlName="email"><br>
+                                  <span *ngIf="contactFunction.email?.invalid && (contactFunction.email?.touched || contactFunction.email?.dirty) || contactFunction.email?.errors?.invalidName" >This email is invalid</span>
+                                  
+                              </label><br>
+                              
+                          </div>
+                          <div class="col-12 space">
+                              
+                          <label for="phone"><span class="title">Phone</span></label><br>
+                          <input type="text"  name="phone" formControlName="phone"><br>
+                          <span *ngIf="contactFunction.phone?.errors?.invalidName">please enter a phone number</span>
+                          
+                        </div>
+                        
+                        <div class="col-12 spaced">
+                            <label for="msg"><span class="title">Massage</span><span class="req">*</span></label><br>
+                            <textarea type="text"  name="msg" formControlName="massage" maxlength="500" placeholder="Leave your message here ..." rows="5"  ></textarea><br>
+
+                          </div>
+                          
+                          <div class="col-12 ">
+                              <button type="submit" [disabled]="ContactForm.invalid" [ngStyle]="{'background-color':ContactForm.invalid? '#2d2d32' : ' var(--maincolor1)' }" >Submit</button>
+                          </div>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+            <div class="col-md-12 col-lg-6 form-success">
+                <div>
+                    <h2 class="success">
+                        Your massage has sent to us succefully,
+                      </h2>
+                      <h2 class="success">
+                          we will contact with you as soon as possible .
+                      </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.fea-school{
+    text-align: center;
+    padding: 100px 0 50px;
+}
+h3.title {
+    color: var(--maincolor1);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+    font-family: 'Poppins', sans-serif;
+}
+h3.sub-title {
+    padding: 4px 25% 50px;    color: #27282c;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.text{
+    padding:0 29%;
+}
+.color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+.green{
+    background:#198754
+}
+.blue{
+    background:#0d6efd 
+}
+.yellow{
+    background:#ffc107
+}
+.red{
+    background:#dc3545
+}
+.instruction {
+    margin: 10px 0;
+}
+.instruction span{
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin: 1px;
+}
+@media screen and (max-width:786px){
+    .instruction span{
+        font-size: 15px;
+    }
+
+}

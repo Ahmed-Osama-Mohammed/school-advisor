@@ -1,0 +1,106 @@
+<div class="contact-us">
+  <div class="container">
+    <div class="row bg">
+      <div class="col-md-12 col-lg-6 p-0 bg-img">
+      </div>
+      <div class="col-md-12 col-lg-6 contain">
+        <form id="form" [formGroup]="SubmitForm" (ngSubmit)="onSubmit()">
+          <h3 class="fill">Fill This Form</h3>
+          <h3 class="text">to let us inform you with all the updates and information that will help</h3>
+            <div class="row">
+              <div class="col-6 space">
+                <label for="name"><span class="title">Your Name</span><span class="req">*</span><br>
+                  <input type="text" name="name" formControlName="name"><br>
+                  <ng-container>
+                    <span
+                      *ngIf="submitFunction.name?.invalid && (submitFunction.name?.touched || submitFunction.name?.dirty ||submitFunction.name?.errors?.invalidName)">name
+                      is invalid</span>
+                  </ng-container>
+                </label><br>
+              </div>
+              <div class="col-6 space">
+                <label for="email"><span class="title">Your email</span><span class="req">*</span><br>
+                  <input type="text" name="email" formControlName="email"><br>
+                  <ng-container>
+                    <span
+                      *ngIf="submitFunction.email?.invalid && (submitFunction.email?.touched || submitFunction.email?.dirty )">email
+                      is invalid</span>
+                  </ng-container>
+                </label><br>
+              </div>
+              <div class="col-4 space">
+                <label for="SchoolName"><span class="title">School Name</span><span class="req">*</span><br>
+                  <input type="text" name="SchoolName" formControlName="schoolName"><br>
+                  <ng-container>
+                    <span
+                      *ngIf="submitFunction.schoolName?.invalid && (submitFunction.schoolName?.touched || submitFunction.schoolName?.dirty)">School
+                      name is invalid</span>
+                  </ng-container>
+                </label><br>
+              </div>
+              <div class="col-4 spaced">
+                <label for="type"><span class="title">School type</span><span class="req">*</span></label><br>
+                <select name="type" formControlName="type">
+                  <option value="American">American</option>
+                  <option value="british">British</option>
+                  <option value="ip">Ip</option>
+                  <option value="ig">Ig</option>
+                  <option value="private">Private</option>
+                  <option value="religion">Religion</option>
+                </select>
+              </div>
+              <div class="col-4 spaced">
+                <label for="grade"><span class="title">School grade</span><span class="req">*</span></label><br>
+                <select name="grade" formControlName="grade">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="col-6 spaced">
+                <label for="government"><span class="title">Government</span><span class="req">*</span></label><br>
+                <select name="government" formControlName="government">
+                  <option *ngFor="let government of egypt" value="{{government}}">{{government}}</option>
+                </select>
+              </div>
+              <div class="col-6 spaced" *ngIf="submitFunction.government?.value =='Cairo' ">
+                <label for="city"><span class="title">city</span><span class="req">*</span></label><br>
+                <select name="city" formControlName="city">
+                  <option *ngFor="let city of cairoCities" value="{{city}}">{{city}}</option>
+                </select>
+              </div>
+
+
+              <div class="col-12 ">
+                <button type="submit" [disabled]="SubmitForm.invalid"
+                  [ngStyle]="{'background-color':SubmitForm.invalid? '#2d2d32' : ' var(--maincolor1)' }">Submit</button>
+              </div>
+            
+          </div>
+        </form>
+      </div>
+      <div class="col-md-12 col-lg-6 form-success">
+        <div>
+            <h2 class="success">
+                Your info has sent to us succefully,
+              </h2>
+              <h2 class="success">
+                  thank you for submiting!
+              </h2>
+              <h2 class="secounds">
+                you will return to home page in {{time}} secounds .
+            </h2>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

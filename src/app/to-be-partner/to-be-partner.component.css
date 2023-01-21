@@ -1,0 +1,83 @@
+.partner{
+    margin: 100px 0;
+}
+h3.title{
+    text-align: center;
+    color: var(--maincolor1);
+    text-transform: uppercase;
+    margin: 60px;
+}
+h2.sub-title{
+    padding-left: 50px;
+    font: 45px "oswald";
+}
+p.text{
+    padding: 10px 0 0 50px;
+    color: gray;
+}
+.fill{
+    text-align: center;
+    color: var(--maincolor1);
+    margin-bottom: 37px;
+    padding: 0;
+    font-size: 25px;
+    font-family: 'Oswald';
+}
+.btn-1{
+    color: white;
+    text-decoration: none;
+    background: var(--maincolor1);
+    padding: 1% 5%;
+    height: 51px;
+    margin-left: 50px;
+    transition: all linear .8s;
+    text-transform: uppercase;
+    margin-top: 40px;
+    width: auto;
+}
+.btn-1:hover{
+    background-color: #cc353e;
+    transform: scale(1.1);
+}
+select {
+    border: none;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+form,.form-success{
+    display: none;
+    border: 1px solid whitesmoke;
+    padding: 50px 20px 0;
+    box-shadow: 0 0 15px #dedada;
+}
+button{
+    margin: 0;
+    margin-bottom: 50px;
+
+}
+input{
+    width: 100%;
+}
+label{
+    width: 100%;
+}
+.btn-check:focus + .btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--maincolor1);
+}
+.success{
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Oswald';
+    color: var(--maincolor1);
+}
+.form-success{
+padding:50px;
+}
+.secounds{
+    text-align: center;
+    padding: 10px 127px 0;
+    font-size: 17px;
+    font-family: 'Oswald';
+    color: gray;
+}
